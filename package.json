@@ -1,0 +1,39 @@
+{
+  "name": "bbbasic",
+  "version": "0.1.0",
+  "description": "A basic BackboneJS starter package, including an index.html with rendered views and useful models and associated controllers to take the mystery out of backbone functionality. Includes tips and tricks for users new to the framework.",
+  "main": "appModel.js",
+  "scripts": {
+    "test": "console.dir('Basic App Is Up & Runnning');"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/existenzial/2015-10-mvp-project.git"
+  },
+  "keywords": [
+    "backbone",
+    "basic",
+    "framework",
+    "javascript",
+    "html",
+    "module",
+    "package",
+    "npm"
+  ],
+  "author": "Jazz Lyles <ripley36706@gmail.com> (https://github.com/existenzial)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/existenzial/2015-10-mvp-project/issues"
+  },
+  "homepage": "https://github.com/existenzial/2015-10-mvp-project#readme",
+  "dependencies": {
+    "backbone": "^1.2.3",
+    "jquery": "^2.1.4",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.3",
+    "sinon": "^1.17.2"
+  }
+}
