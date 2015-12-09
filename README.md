@@ -14,7 +14,7 @@ Provides a few basic Models and Views with an index.html. The instantiation and 
 
 ## How to Get Started ##
 Simply run `npm install bbbasic` and download the module to get access. 
-  > Then require `bbbasic` in your js files.
+Then require `bbbasic` in your js files.
 
 ## Closing Comments ##
 After adjusting the templates to fit the individual needs of your app, get your server up and running and deploy to a service like [Azure](https://azure.microsoft.com/en-us/get-started/) or [Heroku](https://devcenter.heroku.com/start) to complete the process.
