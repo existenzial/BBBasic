@@ -1,5 +1,6 @@
 # BBBasic (Backbone Basic)#
-|<img src="./imgs/Backbone_logo.png"> | + | <img src="./imgs/npm_logo.png">|
+<img src="./imgs/Backbone_logo.png"> | + | <img src="./imgs/npm_logo.png">|
+--- | --- | --- |
 ## Summary ##
 Take the mystery out of Backbone.js and get started with a fully functional REST API boilerplate application. Read and follow along with the comments. 
 
@@ -26,3 +27,5 @@ Backbone.js|MongoDB|Node.js|Express.js|Mocha & Chai|
 
 ## Team ##
 [![Jazz Lyles](https://avatars2.githubusercontent.com/u/10368585?v=3&s=460)](https://github.com/existenzial) <br>Jazz Lyles
+--- |
+[LinkedIn](https://www.linkedin.com/in/jazzlyles)<br>[Twitter](https://twitter.com/JazzLyles)<br>[Site](http://jazzlyles.com)|
