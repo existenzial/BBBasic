@@ -1,20 +1,20 @@
 # BBBasic (Backbone Basic)#
- 
-## Simple App Design ##
-A module designed to help budding young developers with no prior Backbone experience
-
+<img src="./imgs/npm_logo.png"> 
 ## Summary ##
-Get started with a few basic templates representing the major MVC components for a functional app.
+Take the mystery out of Backbone.js and get started with a fully functional REST API boilerplate application. Read and follow along with the comments. 
 
-## Problem ##
-To take the confusion out of what's required to initialize and deploy a minimal website using the Backbone framework.
-
-## Solution ##
-Provides a few basic Models and Views with an index.html. The instantiation and representation of each are already coded for you along with comments on how they tie together to ultimately render a fully adjustable website with base functionality.
+Using Backbone on the frontend and MongoDB, Node and Express on the backend, you can follow along with and adjust the code to the individual needs of your app. 
 
 ## How to Get Started ##
-Simply run `npm install bbbasic` and download the module to get access. 
-Then require `bbbasic` in your js files.
+`npm install bbbasic` to any empty project file to download the module.
 
-## Closing Comments ##
-After adjusting the templates to fit the individual needs of your app, get your server up and running and deploy to a service like [Azure](https://azure.microsoft.com/en-us/get-started/) or [Heroku](https://devcenter.heroku.com/start) to complete the process.
+## Testing ##
+For your convenience, the Mocha and Chai testing suites have been included so that you can customize them for your project. 
+
+## Deployment ##
+After adjusting the templates and tests to fit the individual needs of your app, get your server + database up and running and deploy to a service like [Azure](https://azure.microsoft.com/en-us/get-started/) or [Heroku](https://devcenter.heroku.com/start) to complete the process.
+
+##Tech Stack ##
+<img src="./imgs/Backbone_logo.png">|<img src="./imgs/MongoDB-Logo.png">|<img src="./imgs/node_logo.png">|<img src="./imgs/express-logo.png">|<img src="./imgs/mocha_chai_logo.png">|
+--- | --- | --- | --- | --- |
+Backbone.js|MongoDB|Node.js|Express.js|Mocha & Chai|
