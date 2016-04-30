@@ -27,5 +27,6 @@ Backbone.js|MongoDB|Node.js|Express.js|Mocha & Chai|
 
 ## Team ##
 [![Jazz Lyles](https://avatars2.githubusercontent.com/u/10368585?v=3&s=460)](https://github.com/existenzial) <br>Jazz Lyles
---- |
-[LinkedIn](https://www.linkedin.com/in/jazzlyles)<br>[Twitter](https://twitter.com/JazzLyles)<br>[Site](http://jazzlyles.com)|
+<br>[LinkedIn](https://www.linkedin.com/in/jazzlyles)
+<br>[Twitter](https://twitter.com/JazzLyles)
+<br>[Site](http://jazzlyles.com)
