@@ -1,5 +1,5 @@
 # BBBasic (Backbone Basic)#
-<img src="./imgs/npm_logo.png"> 
+<img src="./imgs/Backbone_logo.png"> + <img src="./imgs/npm_logo.png"> 
 ## Summary ##
 Take the mystery out of Backbone.js and get started with a fully functional REST API boilerplate application. Read and follow along with the comments. 
 
