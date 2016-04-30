@@ -1,39 +1,31 @@
 {
   "name": "bbbasic",
-  "version": "0.1.0",
-  "description": "A basic BackboneJS starter package, including an index.html with rendered views and useful models and associated controllers to take the mystery out of backbone functionality. Includes tips and tricks for users new to the framework.",
-  "main": "appModel.js",
-  "scripts": {
-    "test": "console.dir('Basic App Is Up & Runnning');"
-  },
+  "author": "Jazz Lyles",
+  "email": "ripley36706@gmail.com",
+  "url": "http://jazzlyles.com",
+  "version": "1.0.0",
+  "description": "A full-stack Backbone RESTful API tutorial and starter application using Express, Node, MongoDB, Gulp, Mocha, and Chai",
+  "main": "client/js/app.js",
+  "keywords": "Backbone, Mocha, Chai, REST, API, Node, Express, MongoDB, Tutorial, Full-Stack",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/existenzial/2015-10-mvp-project.git"
+    "url": "https://github.com/existenzial/bbbasic.git"
   },
-  "keywords": [
-    "backbone",
-    "basic",
-    "framework",
-    "javascript",
-    "html",
-    "module",
-    "package",
-    "npm"
-  ],
-  "author": "Jazz Lyles <ripley36706@gmail.com> (https://github.com/existenzial)",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/existenzial/2015-10-mvp-project/issues"
+    "url": "https://github.com/existenzial/bbbasic/issues"
   },
-  "homepage": "https://github.com/existenzial/2015-10-mvp-project#readme",
+  "homepage": "https://github.com/existenzial/bbbasic",
   "dependencies": {
-    "backbone": "^1.2.3",
-    "jquery": "^2.1.4",
-    "underscore": "^1.8.3"
+    "body-parser": "latest",
+    "express": "latest",
+    "express-session": "latest",
+    "mongoose": "latest",
+    "path": "latest"
   },
   "devDependencies": {
-    "chai": "^3.4.1",
-    "mocha": "^2.3.3",
-    "sinon": "^1.17.2"
+    "gulp": "latest",
+    "mocha": "latest",
+    "chai": "latest"
   }
 }

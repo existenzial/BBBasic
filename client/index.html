@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Backbone Full-Stack Starter App</title>
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	</head>
+	<body>
+		<!-- Declare the app used for all subsequent Backbone Models, Collections & Views -->
+		<script type="text/javascript">
+			var app = app || {};
+		</script>
+
+		<h1>Your Library</h1>
+		<div id="books">
+			<form id="addBook" action="#">
+				<div>
+					<label for="coverImage">Cover Image: </label><input id="coverImage" type="file"/>
+					<label for="title">Title: </label><input id="title" type="text"/>
+					<label for="author">Author: </label><input id="author" type="text"/>
+					<label for="releaseDate">Release Date: </label><input id="releaseDate" type="text"/>
+					<label for="keywords">Keywords: </label><input id="keywords" type="text"/>
+					<button id="add">Add</button>
+				</div>
+			</form>
+		</div>
+	<!-- Here we setup the template for each new book -->
+		<script id="bookTemplate" type="text/template">
+			<img src="<%= coverImage %>"height="100" width="100"/>
+			<ul>
+				<li><%= title %></li>
+				<li><%= author %></li>
+				<li><%= $.format.date( new Date(releaseDate), "MMMM YYYY" ) %></li>
+				<!-- the releaseDate is formatted to display better for the user using the jQuery plugin jquery-dateFormat that we loaded in our script tags below -->
+				<li><% _.each( keywords, function(keyObj){%> <%= keyObj.keyword %> <%});  %></li>
+				<!-- Use _.each to iterate through the keywords [] from the backend and create a string separating them. We removed the = assignment operator for this particular template at the start so that the code will run first before assigning what happens in the template. Note that we assign and display each keyword as a property of the keyObj-->
+			</ul>
+			<button class="delete">Delete</button>
+		</script>
+		<!-- Uncomment the lines below to see a placeholder example of what will be returned by the server
+		<div class="bookContainer">
+			<img src="public/placeholder.png" height="100" width="100" />
+			<ul>
+				<li>Title</li>
+				<li>Author</li>
+				<li>Release Date</li>
+				<li>Keywords</li>
+			</ul>
+			<button class="delete">Delete</button>
+		</div> -->
+
+		<!-- Load Library Dependencies -->
+		<script type="text/javascript" src="js/lib/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery-dateFormat.min.js"></script>
+		<script type="text/javascript" src="js/lib/underscore-min.js"></script>
+		<script type="text/javascript" src="js/lib/backbone-min.js"></script>
+		<!-- Load App Script Dependencies -->
+		<script type="text/javascript" src="js/models/bookModel.js"></script>
+		<script type="text/javascript" src="js/collections/bookCollection.js"></script>
+		<script type="text/javascript" src="js/views/bookView.js"></script>
+		<script type="text/javascript" src="js/views/bookCollectionView.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>
