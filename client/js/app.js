@@ -1,5 +1,6 @@
 $(function(){
 	//Uncomment the books [] to see some seed data as an example for how the books stored in the database on your MongoDB backend will appear on the view
+	
 	var books = [
 
 		{
@@ -17,6 +18,7 @@ $(function(){
 		}
 
 	];
+	
 
 	new app.BookCollectionView( books );
 

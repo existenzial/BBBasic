@@ -4,9 +4,9 @@
   "email": "ripley36706@gmail.com",
   "url": "http://jazzlyles.com",
   "version": "0.2.0",
-  "description": "A full-stack Backbone RESTful API tutorial and starter application using Express, Node, MongoDB, Gulp, Mocha, and Chai",
+  "description": "A full-stack Backbone RESTful API tutorial and starter application using Express, Node, MongoDB, Mongoose, Gulp, Mocha, and Chai",
   "main": "client/js/app.js",
-  "keywords": "Backbone, Mocha, Chai, REST, API, Node, Express, MongoDB, Tutorial, Full-Stack",
+  "keywords": "Backbone, Mocha, Chai, Gulp, REST, API, Node, Express, MongoDB, Mongoose, Tutorial, Full-Stack",
   "license": "MIT",
   "repository": {
     "type": "git",
