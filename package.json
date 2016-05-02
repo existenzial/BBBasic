@@ -5,7 +5,13 @@
   "url": "http://jazzlyles.com",
   "version": "0.2.0",
   "description": "A full-stack Backbone RESTful API tutorial and starter application using Express, Node, MongoDB, Mongoose, Gulp, Mocha, and Chai",
-  "main": "client/js/app.js",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha ./test/*.js"  
+  },
   "keywords": "Backbone, Mocha, Chai, Gulp, REST, API, Node, Express, MongoDB, Mongoose, Tutorial, Full-Stack",
   "license": "MIT",
   "repository": {
