@@ -21,9 +21,7 @@
 					<label for="author">Author: </label><input id="author" type="text"/>
 					<label for="releaseDate">Release Date: </label><input id="releaseDate" type="text"/>
 					<label for="keywords">Keywords: </label><input id="keywords" type="text"/>
-					<ul class="stack button-group">
-  						<li><a href="#" id="add" class="button">Add</a></li> --><!-- <button id="add">Add</button>
-  					</ul>
+					<button class="button" id="add">Add</button>
 				</div>
 			</form>
 		</div>
@@ -38,7 +36,7 @@
 				<li><% _.each( keywords, function(keyObj){%> <%= keyObj.keyword %> <%});  %></li>
 				<!-- Use _.each to iterate through the keywords [] from the backend and create a string separating them. We removed the = assignment operator for this particular template at the start so that the code will run first before assigning what happens in the template. Note that we assign and display each keyword as a property of the keyObj-->
 			</ul>
-			<button class="delete">Delete</button>
+			<button class="delete button">Delete</button>
 		</script>
 		<!-- Uncomment the lines below to see a placeholder example of what will be returned by the server
 		<div class="bookContainer">
