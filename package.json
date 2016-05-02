@@ -10,7 +10,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha ./test/*.js"  
+    "test": "mocha ./test/*.js"
   },
   "keywords": "Backbone, Mocha, Chai, Gulp, REST, API, Node, Express, MongoDB, Mongoose, Tutorial, Full-Stack",
   "license": "MIT",
@@ -30,8 +30,17 @@
     "path": "latest"
   },
   "devDependencies": {
+    "chai": "latest",
     "gulp": "latest",
-    "mocha": "latest",
-    "chai": "latest"
+    "gulp-clean-css": "latest",
+    "gulp-concat": "latest",
+    "gulp-csscss": "latest",
+    "gulp-jshint": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-watch": "latest",
+    "jshint": "latest",
+    "mocha": "latest"
   }
 }
