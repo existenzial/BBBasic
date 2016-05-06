@@ -1,5 +1,4 @@
 //Declare Routes
-
 module.exports = function(app){
 	//Route to GET(return) API as a test
 	/*app.get( "/api", function(req, res) {

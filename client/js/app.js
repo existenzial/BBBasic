@@ -37,7 +37,7 @@ $(function(){
 	/*
 	Using jQuery we select the releaseDate field below & use jQueryUI to bind a datePicker UI element to it in prder to avoid tedious manual user input of dates, that might vary in formatting style
 	*/
-	$("#releaseDate").datePicker();
+	$("#releaseDate").datepicker();
 
 	/*
 	Here, we instantiate a new View of the book Collection when the app loads

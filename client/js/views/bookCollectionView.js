@@ -1,6 +1,6 @@
 app.BookCollectionView = Backbone.View.extend({
 	
-	el: "#books",
+	el: $( "#books" ),
 
 	events: {
 		//listen for a click event on the element with an id of "add" and then call the "addBook function"
@@ -12,6 +12,8 @@ app.BookCollectionView = Backbone.View.extend({
 
 		this.collection = new app.BookCollection( booksOnLoad ); //sets a new instance of the collection
 		/*this.collection.fetch({ reset: true }); //resets collection with collection retrieved from api/books/*/
+
+		this.collection.fetch({ reset: true }); //fetch the collection from the "api/books" route and fire the reset event
 
 		this.render(); //renders bookCollection on page load
 
@@ -58,7 +60,7 @@ app.BookCollectionView = Backbone.View.extend({
 					});
 				} else if ( el.id === "releaseDate" ){
 				//if the input field has the id(#) releaseDate
-					formData[ el.id ] = $( "#releaseDate" ).datePicker( "getDate" ).getTime();
+					formData[ el.id ] = $( "#releaseDate" ).datepicker( "getDate" ).getTime();
 					//set the formData[releaseDate] property to the value received from the datePicker user selection
 					//NOTE: getTime() is invoked as well in order to make sure we get the time back in milliseconds for UNIX(aka.: after 1/1/1970) timestamp formatting
 				} else {
