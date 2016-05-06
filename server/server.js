@@ -1,6 +1,6 @@
 var	config = require("./config"),
 	routes = require("./routes"),
-	db = require("./db.js"),
+	db = require("./db"),
 	bodyParser = require("body-parser"), //a module to parse request bodies from the frontend
 	path = require("path"), //a node-core module to help you read file paths
 	mongoose = require("mongoose"), //an ORM to help you model and connect to your MongoDB data
