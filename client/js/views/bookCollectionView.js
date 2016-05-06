@@ -47,14 +47,36 @@ app.BookCollectionView = Backbone.View.extend({
 		$( "#addBook div" ).children( "input" ).each( function(i, el){
 		//use jQuery to select the child input's [] within the #addBook div, then iterate through them
 			if( $( el ).val() !== ""){
-			//if there is actually an input in the field	
-				formData[ el.id ] = $( el ).val();
-				//assign the input to that element's id(aka.: property) on the formData {}
+			//if there is actually an input in the field
+				if( el.id === "keywords" ){
+				//if the input field has the id(#) keywords
+					formData[ el.id ] = []; //set the keywords element to an empty [] for holding the inputted keywords
+					_.each( $( el ).val().split(","), function(keyword){
+					//iterate through the comma-separated keywords	
+						formData[ el.id ].push({ "keyword": keyword });
+						//then push each keyword tuple(aka.: { key: value } pair) to the formData[keywords] []
+					});
+				} else if ( el.id === "releaseDate" ){
+				//if the input field has the id(#) releaseDate
+					formData[ el.id ] = $( "#releaseDate" ).datePicker( "getDate" ).getTime();
+					//set the formData[releaseDate] property to the value received from the datePicker user selection
+					//NOTE: getTime() is invoked as well in order to make sure we get the time back in milliseconds for UNIX(aka.: after 1/1/1970) timestamp formatting
+				} else {
+				//else set the formData[input] property to the value of whatever text the user inputs	
+					formData[ el.id ] = $( el ).val();
+					
+				}
 			}
+			//after submit, clear the input field by setting its value to an empty string("")
+			$( el ).val("");
+
 		});
-
-		this.collection.add( new app.Book( formData ) ); //create a new Book with the formData then add it to the collection
-
+		/*
+		this.collection.add( new app.Book( formData ) ); 
+		//PROBLEM: Data Not Persisted on the Server after adding a book wth the user submitted formData
+		*/
+		this.collection.create( new app.Book( formData ) ); 
+		//SOLUTION: Use the .create() method instead of the .add() method above
 	},
 
 });

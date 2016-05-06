@@ -13,6 +13,18 @@ Navigate to an empty project directory and:
 ```sh
 npm install bbbasic
 ```
+Then install the (optional) project dependencies:
+
+```sh
+npm install
+```
+If wanting to uninstall any unused regular/dev dependencies, e.g.: gulp-related, run:
+
+```sh
+npm uninstall --save [dependency name]
+
+npm uninstall --save-dev [dependency name]
+```
 
 ## Testing ##
 For your convenience, the Mocha and Chai testing suites have been included so that you can customize them for your project. 
