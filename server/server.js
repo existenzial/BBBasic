@@ -1,5 +1,5 @@
-var	config = require("./config.js"),
-	routes = require("./routes.js"),
+var	config = require("./config"),
+	routes = require("./routes"),
 	db = require("./db.js"),
 	bodyParser = require("body-parser"), //a module to parse request bodies from the frontend
 	path = require("path"), //a node-core module to help you read file paths
@@ -8,6 +8,9 @@ var	config = require("./config.js"),
 	app = express(), //instantiates the express server
 	port = port || 3000 || process.env.PORT; //gives you 3 fallbacks for setting the server's port
 ;
+
+//Invoke Routes With App
+routes(app);
 
 //Declare Middleware
 app.use( express.static( path.join(__dirname, "client") ) ); //project will be served from the client directory
