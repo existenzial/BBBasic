@@ -1,22 +1,32 @@
 var chai = require("chai"),
-	mocha = require("mocha");
+	mocha = require("mocha"),
+	expect = chai.expect,
+	assert = chai.assert;
 
-describe("Your Library Spec", function(){
-	it("true to be true", function(){
-		expect(true).to.be.true;
+describe("Your Book Library App", function(){
+
+	describe('Book Model', function() {
+		it("should create a new Book instance", function(){
+
+		});
 	});
-});
 
-describe('Array', function() {
-  it('should start empty', function() {
-    var arr = [];
+	describe('Book View', function() {
+		it("should create a new Book View instance", function(){
 
-    assert.equal(arr.length, 0);
-  });
-});
-
-describe('Book', function() {
-	it("should create a new Book", function(){
-
+		});
 	});
+
+	describe('Book Collection', function() {
+		it("should create a new Book Collection instance", function(){
+
+		});
+	});
+	
+	describe('Book Collection View', function() {
+		it("should create a new Book Collection View instance", function(){
+
+		});
+	});
+
 });
