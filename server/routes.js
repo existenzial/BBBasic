@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 module.exports = function(){
+	
+	router.get("/", function(req, res){});
 	//Route to GET(return) every book
 	router.get("/api/books", function(req, res){
 		

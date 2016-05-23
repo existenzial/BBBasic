@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>BBBasic Tests</title>
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      var app = app || {};
+    </script>
+    <div id="mocha"></div>
+    <!-- Load Library Dependencies -->
+    <script type="text/javascript" src="../client/js/lib/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="../client/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../client/js/lib/underscore-min.js"></script>
+    <script type="text/javascript" src="../client/js/lib/backbone-min.js"></script>
+    <!-- Load Mocha / Chai -->
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <!-- Scripts To Test Below -->
+    <script type="text/javascript" src="../client/js/models/bookModel.js"></script>
+    <script type="text/javascript" src="../client/js/views/bookView.js"></script>
+    <script type="text/javascript" src="../client/js/collections/bookCollection.js"></script>
+    <script type="text/javascript" src="../client/js/views/bookCollectionView.js"></script>
+    <script type="text/javascript" src="../client/js/app.js"></script>
+    <!-- Spec Scripts Below -->
+    <script type="text/javascript" src="./clientSpec.js"></script>
+
+    <script>
+      mocha.run();
+    </script>
+  </body>
+
+</html>
