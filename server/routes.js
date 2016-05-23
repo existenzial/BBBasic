@@ -1,11 +1,10 @@
-//Declare Routes
-module.exports = function(app){
-	//Route to GET(return) API as a test
-	/*app.get( "/api", function(req, res) {
-	res.send( "API requested from the frontend" );
-});*/
+var express = require('express');
+var router = express.Router();
+
+module.exports = function(){
 	//Route to GET(return) every book
-	app.get("/api/books", function(req, res){
+	router.get("/api/books", function(req, res){
+		
 		return BookModel.find( function(err, books){
 		/*
 		The .find() method takes 4 arguments: conditions, fields, options, & a callback. Since we want to send a list of every book saved in the database in our response to the frontend's request, we only need the callback in this case.
@@ -18,19 +17,8 @@ module.exports = function(app){
 		});
 	});
 
-	//Route to GET(return) a single book by ID
-	app.get("/api/books/:id", function(req, res){
-		return Book.findById( req.params.id, function(err, book){
-			if( !err ){
-				return res.send( book );
-			} else {
-				return console.log( err );
-			}
-		});
-	});
-
 	//Route to POST(add) a single book to the database
-	app.post("/api/books", function(req, res){
+	router.post("/api/books", function(req, res){
 		//create a new Book from the body of the POST request
 		var book = new Book({
 			title: req.body.title,
@@ -51,8 +39,20 @@ module.exports = function(app){
 		});
 	});
 
+	//Route to GET(return) a single book by ID
+	router.get("/api/books/:id", function(req, res){
+
+		return Book.findById( req.params.id, function(err, book){
+			if( !err ){
+				return res.send( book );
+			} else {
+				return console.log( err );
+			}
+		});
+	});
+
 	//Route to PUT(update) a single book in the database
-	app.put("/api/books/:id", function(req, res){
+	router.put("/api/books/:id", function(req, res){	
 		
 		console.log( "Updating " + req.body.title + " record in the database..." );
 
@@ -71,11 +71,11 @@ module.exports = function(app){
 				}
 			});
 		});
-	});
+	})
 
 	//Route to DELETE a single book from the database
-	app.delete("/api/books/:id", function(req, res){
-
+	router.delete("/api/books/:id", function(req, res){
+			
 		console.log( "Deleting " + req.body.title + " with id: " + req.params.id + " from the database..." );
 
 		return Book.findById( req.params.id, function(err, book){
@@ -88,6 +88,5 @@ module.exports = function(app){
 				}
 			});
 		});
-
 	});
 };

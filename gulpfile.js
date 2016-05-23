@@ -8,7 +8,8 @@ var gulp = require("gulp"),
 	mincss = require("gulp-minify-css"),
 	minjs = require("gulp-uglify"),
 	jshint = require("gulp-jshint"),
-	mocha = require("mocha");
+	mocha = require("mocha"),
+	morgan = require("morgan");
 
 var options = {
 
