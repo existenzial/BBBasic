@@ -1,5 +1,6 @@
-var	config = require("./config.js"),
-	invokeRoutes = require("./routes.js"),
+var	config = require("./config"),
+	invokeRoutes = require("./routes"),
+	favicon = require('serve-favicon'),
 	db = require("./db.js"),
 	bodyParser = require("body-parser"), //a module to parse request bodies from the frontend
 	http = require('http'),
@@ -11,7 +12,8 @@ var	config = require("./config.js"),
 ;
 
 //Declare Middleware
-app.use( express.static( path.join(__dirname, "client") ) ); //project will be served from the client directory
+app.use( express.static( path.join("client") ) ); //project will be served from the client directory
+app.use( favicon('./client/favicon.ico') ); // serve dummy favicon
 app.use( "/api/books", invokeRoutes );
 app.use( "/api/books/:id", invokeRoutes );
 app.use( bodyParser.json() );
@@ -25,7 +27,7 @@ invokeRoutes(app);
 
 /*****************************/
 /* ----- To View Your Simple App Template -----
-- Connect to your MongoDB database ( type "mongod" from the command line) 
+- Connect to your MongoDB database ( type "mongod" from the command line)
 - Use Node or Nodemon to Start Up the Server.js (type "node server.js" or "nodemon server.js" from the command line)
 */
 /*****************************/

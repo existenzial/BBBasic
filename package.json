@@ -27,7 +27,8 @@
     "express": "latest",
     "express-session": "latest",
     "mongoose": "latest",
-    "path": "latest"
+    "path": "latest",
+    "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
     "chai": "latest",

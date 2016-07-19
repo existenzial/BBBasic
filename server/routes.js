@@ -1,20 +1,20 @@
 var express = require('express');
 var router = express.Router();
 
-module.exports = function(){
-	
+module.exports = function(request, response, next){
+
 	router.get("/", function(req, res){});
 	//Route to GET(return) every book
 	router.get("/api/books", function(req, res){
-		
+
 		return BookModel.find( function(err, books){
 		/*
 		The .find() method takes 4 arguments: conditions, fields, options, & a callback. Since we want to send a list of every book saved in the database in our response to the frontend's request, we only need the callback in this case.
-		*/	
+		*/
 			if( !err ){
 				return res.send( books );
 			} else {
-				return console.log( err );
+				return res.status(404).send( err );
 			}
 		});
 	});
@@ -30,7 +30,7 @@ module.exports = function(){
 		});
 
 		return book.save( function(err){
-		//save the new Book	
+		//save the new Book
 			if( !err ){
 				console.log("book created and saved");
 				//then return the new Book to the frontend so it can have access to that Book's id in the database
@@ -54,8 +54,8 @@ module.exports = function(){
 	});
 
 	//Route to PUT(update) a single book in the database
-	router.put("/api/books/:id", function(req, res){	
-		
+	router.put("/api/books/:id", function(req, res){
+
 		console.log( "Updating " + req.body.title + " record in the database..." );
 
 		return Book.findById( req.params.id, function(err, book){
@@ -63,8 +63,8 @@ module.exports = function(){
 			book.author = req.body.author;
 			book.releaseDate = req.body.releaseDate;
 			book.keywords = req.body.keywords;
-		
-			return book.save( function(err){	
+
+			return book.save( function(err){
 				if( !err ){
 					console.log( book.title + " record updated" );
 					return res.send( book );
@@ -77,7 +77,7 @@ module.exports = function(){
 
 	//Route to DELETE a single book from the database
 	router.delete("/api/books/:id", function(req, res){
-			
+
 		console.log( "Deleting " + req.body.title + " with id: " + req.params.id + " from the database..." );
 
 		return Book.findById( req.params.id, function(err, book){
