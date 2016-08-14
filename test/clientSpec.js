@@ -8,7 +8,7 @@ describe("Your Book Library App", function(){
 
 	beforeeach(function(){
 
-		let port = port || 3000 || process.env.PORT;
+		let port = port || 3000;
 		let app = app || {};
 
 	});
