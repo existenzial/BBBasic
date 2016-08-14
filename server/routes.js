@@ -3,7 +3,11 @@ var router = express.Router();
 
 module.exports = function(request, response, next){
 
-	router.get("/", function(req, res){});
+	router.get("/", function(req, res){
+
+		res.redirect("/api/books");
+
+	});
 	//Route to GET(return) every book
 	router.get("/api/books", function(req, res){
 
@@ -12,9 +16,10 @@ module.exports = function(request, response, next){
 		The .find() method takes 4 arguments: conditions, fields, options, & a callback. Since we want to send a list of every book saved in the database in our response to the frontend's request, we only need the callback in this case.
 		*/
 			if( !err ){
-				return res.send( books );
+				res.writeHead(200, { 'Content-Type', 'application/json' });
+				return res.json( JSON.stringify( books ) );
 			} else {
-				return res.status(404).send( err );
+				return res.status(404).end( console.error( err ) );
 			}
 		});
 	});
