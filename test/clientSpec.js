@@ -8,35 +8,35 @@ describe("Your Book Library App", function(){
 
 	beforeeach(function(){
 
-		let port = port || 3000;
-		let app = app || {};
+		var port = port || 3000;
+		var app = app || {};
 
 	});
 
 	describe('Book Model', function() {
 		xit("should create a new Book instance", function(){
-			let book = new app.BookModel({});
+			var book = new app.BookModel({});
 			expect(book).to.be.an.instance.of(app.BookModel);
 		});
 	});
 
 	describe('Book View', function() {
 		xit("should create a new Book View instance", function(){
-			let bookView = new app.BookView({});
+			var bookView = new app.BookView({});
 			expect(bookView).to.be.an.instance.of(app.BookView);
 		});
 	});
 
 	describe('Book Collection', function() {
 		xit("should create a new Book Collection instance", function(){
-			let bookCollection = new app.BookCollection({});
+			var bookCollection = new app.BookCollection({});
 			expect(bookCollection).to.be.an.instance.of(app.BookCollection);
 		});
 	});
 
 	describe('Book Collection View', function() {
 		xit("should create a new Book Collection View instance", function(){
-			let bookCollectionView = new app.BookCollectionView({});
+			var bookCollectionView = new app.BookCollectionView({});
 			expect(bookCollectionView).to.be.an.instance.of(app.BookCollectionView);
 		});
 	});
@@ -65,7 +65,7 @@ describe("Your Book Library App", function(){
 
 		});
 
-		xit("'/api/books' Route", function(done){
+		xit("/api/books", function(done){
 			xit("GET", function(){
 				xit("should be successful", function(){
 					superagent
@@ -87,7 +87,7 @@ describe("Your Book Library App", function(){
 
 		});
 
-		xit("'/api/books/:id' Route", function(done){
+		xit("/api/books/:id", function(done){
 			xit("GET", function(){});
 			xit("PUT", function(){});
 			xit("DELETE", function(){});
