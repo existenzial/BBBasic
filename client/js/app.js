@@ -4,18 +4,18 @@
 
 		- a new View for the BookCollection
 		- any necessary setup items for the app itself (e.g.: the datePicker for the "releaseDate" input field)
-	
+
 */
 
 $(function(){
 	/*
 	UN-COMMENT the books [] to see :
 
-	- some sample seed book data 
+	- some sample seed book data
 	- an example of how the books stored in the database will appear on the view
 
 	*/
-	
+
 /*	var books = [
 
 		{
@@ -33,9 +33,9 @@ $(function(){
 		}
 
 	];*/
-	
+
 	/*
-	Using jQuery we select the releaseDate field below & use jQueryUI to bind a datePicker UI element to it in prder to avoid tedious manual user input of dates, that might vary in formatting style
+	Using jQuery we select the releaseDate field below & use jQueryUI to bind a datePicker UI element to it in order to avoid tedious manual user input of dates, that might vary in formatting style
 	*/
 	$("#releaseDate").datepicker();
 

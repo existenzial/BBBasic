@@ -1,5 +1,5 @@
 app.Book = Backbone.Model.extend({
-	
+
 	defaults: {
 		coverImage: "public/placeholder.png",
 		title: "Untitled",
@@ -12,9 +12,9 @@ app.Book = Backbone.Model.extend({
 
 	Since we want our Book Models to sync properly by id, we have to account for the fact that MongoDB saves each in the database with that id attribute precluded by an _, but Backbone wants that id to display without the _.
 
-	You must reassign the property without an _ before returning the data to the client/frontend to retain changes that you make on the server (e.g.: deleting a book) and avoid accidental duplication (e.g.: the book still displaying despite deletion).
+	You must reassign the property without an _ before returning the data to the client to retain changes that you make on the server (e.g.: deleting a book) and avoid accidental duplication (e.g.: the book still displaying despite deletion).
 
-	Alternatively and preferrably, you could also assign the idAttribute of the Model to _id.
+	Alternatively and preferably, you could also assign the idAttribute of the Model to _id.
 	*/
 	parse: function( res ){
 		res.id = res._id;
