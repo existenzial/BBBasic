@@ -3,7 +3,7 @@
   "author": "Jazz Lyles",
   "email": "ripley36706@gmail.com",
   "url": "http://jazzlyles.com",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A full-stack Backbone RESTful API tutorial and starter application using Express, Node, MongoDB, Mongoose, Gulp, Mocha, and Chai",
   "main": "index.js",
   "directories": {
