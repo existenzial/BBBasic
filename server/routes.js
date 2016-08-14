@@ -16,8 +16,8 @@ module.exports = function(request, response, next){
 		The .find() method takes 4 arguments: conditions, fields, options, & a callback. Since we want to send a list of every book saved in the database in our response to the frontend's request, we only need the callback in this case.
 		*/
 			if( !err ){
-				res.writeHead(200, { 'Content-Type', 'application/json' });
-				return res.json( JSON.stringify( books ) );
+				res.writeHead(200, { 'Content-Type': 'application/json' });
+				return res.send( JSON.stringify( books ) );
 			} else {
 				return res.status(404).end( console.error( err ) );
 			}
