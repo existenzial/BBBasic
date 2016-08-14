@@ -1,4 +1,4 @@
-var	config = require("./config"),
+const	config = require("./config"),
 	invokeRoutes = require("./routes"),
 	favicon = require('serve-favicon'),
 	db = require("./db.js"),
@@ -9,7 +9,6 @@ var	config = require("./config"),
 	express = require("express"), //a framework module to help you write your server code easily and without pure vanilla javacript
 	app = express(), //instantiates the express server
 	port = port || 3000 || process.env.PORT; //gives you 3 fallbacks for setting the server's port
-;
 
 //Declare Middleware
 app.use( express.static( path.join("client") ) ); //project will be served from the client directory
