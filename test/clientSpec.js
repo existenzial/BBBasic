@@ -21,14 +21,14 @@ describe("Your Book Library App", function(){
 	});
 
 	describe('Book Collection', function() {
-		it("should create a new Book Collection instance", function(){
+		xit("should create a new Book Collection instance", function(){
 			var bookCollection = new app.BookCollection({});
 			expect(bookCollection).to.be.an.instance.of(app.BookCollection);
 		});
 	});
 
 	describe('Book Collection View', function() {
-		it("should create a new Book Collection View instance", function(){
+		xit("should create a new Book Collection View instance", function(){
 			var bookCollectionView = new app.BookCollectionView({});
 			expect(bookCollectionView).to.be.an.instance.of(app.BookCollectionView);
 		});
