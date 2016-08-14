@@ -6,7 +6,7 @@ const chai = require("chai"),
 
 describe("Your Book Library App", function(){
 
-	beforeeach(function(){
+	beforeEach(function(){
 
 		var port = port || 3000;
 		var app = app || {};
