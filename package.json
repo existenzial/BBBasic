@@ -43,6 +43,7 @@
     "gulp-uglify": "^1.5.3",
     "gulp-watch": "latest",
     "jshint": "^2.9.2",
-    "mocha": "latest"
+    "mocha": "latest",
+    "superagent": "^2.2.0"
   }
 }
