@@ -1,14 +1,15 @@
 # BBBasic (Backbone Basic)#
+[![Build Status](https://travis-ci.org/existenzial/BBBasic.svg?branch=master)](https://travis-ci.org/existenzial/BBBasic)
 <img src="./imgs/Backbone_logo.png"> | <img src="./imgs/npm_logo.png">|
 --- | --- |
 ## Summary ##
-Take the mystery out of Backbone.js and get started with a fully functional REST API boilerplate application. Read and follow along with the comments. 
+Take the mystery out of Backbone.js and get started with a fully functional REST API boilerplate application. Read and follow along with the comments.
 
-Using Backbone on the frontend and MongoDB, Node and Express on the backend, you can follow along with and adjust the code to the individual needs of your app. 
+Using Backbone on the frontend and MongoDB, Node and Express on the backend, you can follow along with and adjust the code to the individual needs of your app.
 
 ## How to Get Started ##
 
-Navigate to an empty project directory and: 
+Navigate to an empty project directory and:
 
 ```sh
 npm install bbbasic
@@ -27,7 +28,7 @@ npm uninstall --save-dev [dependency name]
 ```
 
 ## Testing ##
-For your convenience, the Mocha and Chai testing suites have been included so that you can customize them for your project. 
+For your convenience, the Mocha and Chai testing suites have been included so that you can customize them for your project.
 
 ## Deployment ##
 After adjusting the templates and tests to fit the individual needs of your app, get your server + database up and running and deploy to a service like [Azure](https://azure.microsoft.com/en-us/get-started/) or [Heroku](https://devcenter.heroku.com/start) to complete the process.
