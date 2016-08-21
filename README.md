@@ -1,5 +1,5 @@
-# BBBasic (Backbone Basic)#
 [![Build Status](https://travis-ci.org/existenzial/BBBasic.svg?branch=master)](https://travis-ci.org/existenzial/BBBasic)
+# BBBasic (Backbone Basic) #
 <img src="./imgs/Backbone_logo.png"> | <img src="./imgs/npm_logo.png">|
 --- | --- |
 ## Summary ##
